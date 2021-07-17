@@ -1,7 +1,5 @@
 package sliceutil
 
-import "github.com/spf13/cast"
-
 //
 func InArray(needle interface{}, hystack interface{}) bool {
 	switch key := needle.(type) {
@@ -107,18 +105,10 @@ func Filter(vs []string, f func(string) bool) []string {
 	return vsf
 }
 
-func Map(vs []string, f func(string) string) []string {
+func Map(vs []string, f func(string2 string) string) []string {
 	vsm := make([]string, len(vs))
 	for i, v := range vs {
 		vsm[i] = f(v)
-	}
-	return vsm
-}
-
-func Map2(vs []interface{}, f func(interface{}) interface{}) []string {
-	vsm := make([]string, len(vs))
-	for i, v := range vs {
-		vsm[i] = cast.ToString(f(v))
 	}
 	return vsm
 }
