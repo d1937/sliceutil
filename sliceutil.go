@@ -41,29 +41,6 @@ func ArrayUnique(arr []string) []string {
 	return result
 }
 
-/*
-
- var strs = []string{"peach", "apple", "pear", "plum"}
-
-    fmt.Println(Index(strs, "pear"))
-
-    fmt.Println(Include(strs, "grape"))
-
-    fmt.Println(Any(strs, func(v string) bool {
-        return strings.HasPrefix(v, "p")
-    }))
-
-    fmt.Println(All(strs, func(v string) bool {
-        return strings.HasPrefix(v, "p")
-    }))
-
-    fmt.Println(Filter(strs, func(v string) bool {
-        return strings.Contains(v, "e")
-    }))
-
-    fmt.Println(Map(strs, strings.ToUpper))
-*/
-
 func Index(vs []string, t string) int {
 	for i, v := range vs {
 		if v == t {

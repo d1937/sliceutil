@@ -24,6 +24,12 @@ fmt.Println(All(strs, func(v string) bool {
 })) // output: false
 
 Filter(vs []string, f func(string) bool) []string  遍历切片vs,的每个值，并作为参数传递给函数f调用,返回符合条件的值
+fmt.Println(Filter(strs, func(v string) bool {
+return strings.Contains(v, "e")
+}))
+
 
 Map(vs []string, f func(string) string) []string  遍历切片vs,的每个值，并作为参数传递给函数f调用并返回
+
+fmt.Println(Map(strs, strings.ToUpper))
 ```
